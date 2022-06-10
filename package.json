@@ -3,7 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "clean": "rm -rf public",
+    "build:styles": "lessc src/style/style.less public/style.css",
+    "build:mkdir": "mkdir -p public",
+    "build:copy": "cp -r static/tracks public && cp -r static/html/. public && cp -r src/js public/js",
+    "build": "npm run clean && npm run build:mkdir && npm run build:copy && npm run build:styles"
   },
   "dependencies": {
     "body-parser": "~1.8.1",
@@ -29,5 +34,8 @@
     "request": "^2.58.0",
     "serve-favicon": "~2.1.3",
     "uuid": "^2.0.1"
+  },
+  "devDependencies": {
+    "less": "^4.1.3"
   }
 }
