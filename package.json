@@ -3,11 +3,14 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "clean": "rm -rf public",
+    "clean": "rm -rf build",
     "build:styles": "lessc src/style/style.less public/style.css",
-    "build:mkdir": "mkdir -p public",
-    "build:copy": "cp -r static/tracks public && cp -r static/html/. public && cp -r src/js public/js",
-    "build": "npm run clean && npm run build:mkdir && npm run build:copy && npm run build:styles"
+    "build:mkdir": "mkdir -p build",
+    "build:copy": "cp -r static/tracks build && cp -r static/html/. build && cp -r src/js build/js",
+    "build": "npm run clean && npm run build:mkdir && npm run build:copy && npm run build:styles",
+    "createCname": "touch build/CNAME && echo 'bloodfrenzy.club' > build/CNAME",
+    "push": "git subtree split --prefix public -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages",
+    "deploy": "npm run clean && npm run build && npm run createCname && npm run push"
   },
   "dependencies": {
     "connect-busboy": "~0.0.2",
