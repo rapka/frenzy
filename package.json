@@ -13,14 +13,6 @@
     "deploy": "npm run clean && npm run build && npm run createCname && npm run push"
   },
   "dependencies": {
-    "connect-busboy": "~0.0.2",
-    "debug": "~2.0.0",
-    "jade": "~1.6.0",
-    "jquery": "~2.1.3",
-    "request": "^2.58.0",
-    "uuid": "^2.0.1"
-  },
-  "devDependencies": {
     "less": "^4.1.3"
   }
 }
