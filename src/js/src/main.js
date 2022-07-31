@@ -53,6 +53,7 @@ var releases = {
 }
 
 window.onload = function() {
+	console.log('onload!');
 	if (!desktop) {
 		$('#stop').hide();
 		$('#hide').hide();
@@ -68,6 +69,8 @@ window.onload = function() {
 		$('.' + $(this)[0].id + '-section').toggleClass('selected');
 		$(this).toggleClass('selected');
 	});
+
+	console.log('onload2!', releases[activeRelease]);
 
 	$('#release-number').text(releases[activeRelease].number);
 	$('#release-artist').text(releases[activeRelease].artist);

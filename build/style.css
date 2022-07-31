@@ -251,7 +251,7 @@ body {
     letter-spacing: 8px;
   }
   body {
-    background-image: url('../img/small-spray.png');
+    background-image: url('/img/small-spray.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
   }
