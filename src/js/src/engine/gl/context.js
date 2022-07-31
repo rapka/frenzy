@@ -5,7 +5,7 @@ var mesh = require('./mesh'),
     extend = require('../utils').extend,
     shader = require('./shader');
 
-require('./_webgl-debug');
+require('./webgl-debug');
 
 exports.Context = function(gl, resources){
     this.gl = gl;
