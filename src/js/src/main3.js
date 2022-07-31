@@ -256,7 +256,7 @@ Visualizer.prototype = {
 			var loaded = false;
 			if (!playing && currentTrack != activeRelease) {
 				var request = new XMLHttpRequest();
-				request.open('GET', 'track/knees.wav', true);
+				request.open('GET', 'tracks/knees.wav', true);
 				request.responseType = 'arraybuffer';
 
 				request.onload = function() {

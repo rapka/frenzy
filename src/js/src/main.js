@@ -151,7 +151,7 @@ Visualizer.prototype = {
 			var loaded = false;
 			if (!playing && currentTrack != activeRelease) {
 				var request = new XMLHttpRequest();
-				request.open('GET', 'track/' + releases[activeRelease].mp3, true);
+				request.open('GET', 'tracks/' + releases[activeRelease].mp3, true);
 				request.responseType = 'arraybuffer';
 				listenButton.innerHTML = '...';
 
