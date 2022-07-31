@@ -26,12 +26,4 @@ data
 #upload folder
 upload
 
-#private config files
-config.json
-admins.json
-aws.json
-
-#sessions directory
-sessions
-
-node_modules/*
+build
