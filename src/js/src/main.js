@@ -1,6 +1,9 @@
-define(function(require, exports, module){
+define(function(require, exports, module) {
+
+console.log('requiring');
 require('game-shim');
 // only when optimized
+console.log('requiring done');
 
 var desktop = true;
 var renderBlood = true;
