@@ -5,8 +5,8 @@
   "scripts": {
     "clean": "rm -f public/style.css",
     "build:styles": "lessc src/style/style.less public/style.css",
-    "build": "npm run clean && npm run build:styles",
-    "createCname": "touch build/CNAME && echo 'bloodfrenzy.club' > public/CNAME",
+    "build": "npm run clean && npm run createCname && npm run build:styles",
+    "createCname": "touch public/CNAME && echo 'bloodfrenzy.club' > public/CNAME",
     "push": "git subtree split --prefix public -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages",
     "deploy": "npm run clean && npm run build && npm run createCname && npm run push"
   },
