@@ -6,7 +6,7 @@
     "clean": "rm -rf build",
     "build:styles": "lessc src/style/style.less build/style.css",
     "build:mkdir": "mkdir -p build",
-    "build:copy": "cp -r static/tracks build && cp -r static/html/. build && cp -r src/js build/js",
+    "build:copy": "cp -r static/tracks build && cp -r static/img build && cp -r static/html/. build && cp -r src/js build/js",
     "build": "npm run clean && npm run build:mkdir && npm run build:copy && npm run build:styles",
     "createCname": "touch build/CNAME && echo 'bloodfrenzy.club' > build/CNAME",
     "push": "git subtree split --prefix build -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages",
